@@ -18,7 +18,7 @@ type ActionType = {
 // Initial state object
 const initialState: InitialStateType = {
   theme,
-  mode: 'dark',
+  mode: 'light',
 }
 
 // Create the context with proper types for state and dispatch

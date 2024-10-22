@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const Page = styled.div``
-
-export const Container = styled.div`
+export const Wrapper = styled.div`
   ${({ theme }) => css`
     padding: 10px;
     background: ${theme.colors.primary};

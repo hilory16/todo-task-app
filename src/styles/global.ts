@@ -20,14 +20,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html {
-      font-size: 62.5%;
       min-width: 320px;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-        'Droid Sans', 'Helvetica Neue', sans-serif;
-      font-size: 1.6rem;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
       line-height: 1.5;
       scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
@@ -54,6 +52,48 @@ export const GlobalStyle = createGlobalStyle`
     li,
     ol {
       list-style: none;
+    }
+
+    .roboto-thin {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    .roboto-light {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .roboto-regular {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .roboto-medium {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .roboto-bold {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .roboto-thin-italic {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      font-style: italic;
+    }
+
+    .roboto-light-italic {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-style: italic;
     }
   `};
 `
