@@ -27,8 +27,8 @@ And then:
 yarn preview
 ```
 
-## Commands
-
-- `dev`: runs your application on `localhost:3000`
-- `build`: creates the production build version
-- `preview`: starts a simple server with the build production code
+## Commands 
+- `yarn install`: to install dependencies`
+- `yarn dev`: runs your application on `localhost:3000`
+- `yarn build`: creates the production build version
+- `yarn preview`: starts a simple server with the build production code
