@@ -5,15 +5,13 @@ import { UserWelcome } from '../UserWelcome'
 
 import * as S from './Sidebar.style'
 
+import { TodoType } from '~/types/todo'
+
 type TodoListProps = {
-  todos: {
-    todo: string
-    completed: boolean
-    id: string
-  }[]
+  todos: TodoType[] | []
 }
 
-export default function Sidebar({ todos }: TodoListProps) {
+export function Sidebar({ todos }: TodoListProps) {
   return (
     <S.Wrapper>
       <UserWelcome
@@ -24,9 +22,11 @@ export default function Sidebar({ todos }: TodoListProps) {
       <UpgradeBanner />
       <TodoList todos={todos} />
 
-      <div className="add-new-todo">
-        <Text as="p">+</Text>
-      </div>
+      <button type="button" className="add-new-todo">
+        <Text className="add-text" as="p">
+          +
+        </Text>
+      </button>
     </S.Wrapper>
   )
 }

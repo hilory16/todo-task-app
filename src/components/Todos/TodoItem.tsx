@@ -1,5 +1,8 @@
+import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { Text } from '../Text'
+
+import * as S from './Todos.style'
 
 type TodoItemProps = {
   todo: string
@@ -9,16 +12,13 @@ type TodoItemProps = {
 
 export function TodoItem({ todo, onEdit, completed }: TodoItemProps) {
   return (
-    <div>
-      <div className="todo-checkbox-container">
-        <Checkbox checked={completed} />
-      </div>
-      <div className="todo-text-container">
-        <Text as="p">{todo}</Text>
-      </div>
+    <S.TodoItemWrapper>
+      <Checkbox checked={completed} label={todo} />
       <div className="todo-button">
-        <button onClick={onEdit}></button>
+        <Button onClick={onEdit} variant="default" size="medium">
+          Edit
+        </Button>
       </div>
-    </div>
+    </S.TodoItemWrapper>
   )
 }

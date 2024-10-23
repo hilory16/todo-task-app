@@ -10,7 +10,7 @@ const Text = styled.p.attrs<TextProps>(({ as }) => ({
 }))<TextProps>`
   font-size: ${({ fontSize }) => fontSize || '1rem'}; // Default font size if not provided
   line-height: 1.5;
-  color: #333; // Default color, can be customized further
+  color: ${({ color, theme }) => color || theme.colors.textColor};
 `
 
 export { Text }

@@ -4,16 +4,15 @@ import * as S from './Task.style'
 import TaskControl from './TaskControl'
 import TaskHeading from './TaskHeading'
 
-export default function Task() {
-  const [todo, setTodo] = useState<string>('')
+type TaskProps = {
+  onAddTodo: (todo: string) => void
+}
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTodo(event.target.value)
-  }
+export default function Task({ onAddTodo }: TaskProps) {
   return (
-    <S.Wrapper>
+    <S.TaskWrapper>
       <TaskHeading text="Edit Task" />
-      <TaskControl label="Task Name" value={todo} onChange={handleChange} />
-    </S.Wrapper>
+      <TaskControl label="Task Name" onAddTodo={onAddTodo} />
+    </S.TaskWrapper>
   )
 }

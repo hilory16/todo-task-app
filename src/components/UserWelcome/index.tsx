@@ -18,7 +18,9 @@ export function UserWelcome({ greeting, welcomeText, img }: UserWelcomeProps) {
       </div>
       <div className="user-text-container">
         <Heading as="h1">{greeting}</Heading>
-        <Text as="p">{welcomeText}</Text>
+        <Text as="p" className="welcome-text">
+          {welcomeText}
+        </Text>
       </div>
     </S.Wrapper>
   )

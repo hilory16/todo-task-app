@@ -1,17 +1,16 @@
 import { TodoItem } from './TodoItem'
+import * as S from './Todos.style'
+
+import { TodoType } from '~/types/todo'
 
 type TodoListProps = {
-  todos: {
-    todo: string
-    completed: boolean
-    id: string
-  }[]
+  todos: TodoType[]
 }
 
 export function TodoList({ todos }: TodoListProps) {
   return (
-    <div>
-      {todos.map(({ id, todo, completed }) => (
+    <S.TodoListWrapper>
+      {todos?.map(({ id, todo, completed }) => (
         <TodoItem
           key={id}
           todo={todo}
@@ -21,6 +20,6 @@ export function TodoList({ todos }: TodoListProps) {
           }}
         />
       ))}
-    </div>
+    </S.TodoListWrapper>
   )
 }

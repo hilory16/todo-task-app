@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 type HeadingProps = {
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  color?: string
 }
 
 const Heading = styled.h1.attrs<HeadingProps>(({ as }) => ({
@@ -10,22 +11,22 @@ const Heading = styled.h1.attrs<HeadingProps>(({ as }) => ({
   font-size: ${({ as }) => {
     switch (as) {
       case 'h1':
-        return '2.5rem'
+        return '32px'
       case 'h2':
-        return '2rem'
+        return '28px'
       case 'h3':
-        return '1.75rem'
+        return '24px'
       case 'h4':
-        return '1.5rem'
+        return '20px'
       case 'h5':
-        return '1.25rem'
+        return '18px'
       case 'h6':
-        return '1rem'
       default:
-        return '1rem'
+        return '16px'
     }
   }};
-  font-weight: bold;
+  font-weight: 700;
+  color: ${({ color, theme }) => color || theme.colors.base};
 `
 
 export { Heading }
