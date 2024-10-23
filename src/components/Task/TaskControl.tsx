@@ -1,45 +1,35 @@
-import { useState } from 'react'
 import { Button } from '../Button'
 import { Input } from '../Input'
 
 import * as S from './Task.style'
 
-import { TodoType } from '~/types/todo'
-
 type TaskControlProps = {
   label: string
   value: string
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-  onAddTodo: (todo: string) => void
+  onChange: (value: string) => void
+  onAddTodo: () => void
+  onDeleteTodo: () => void
 }
 
-export default function TaskControl({ label, onAddTodo }: TaskControlProps) {
-  const [todo, setTodo] = useState<string>('')
-  const onDeleteTask = () => {}
-
+export default function TaskControl({ value, label, onChange, onAddTodo, onDeleteTodo }: TaskControlProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTodo(event.target.value)
-  }
-
-  const onSubmitTodo = () => {
-    onAddTodo(todo)
-    setTodo('')
+    onChange(event.target.value)
   }
 
   return (
     <S.TaskControlWrapper>
       <div className="input-area">
-        <Input {...{ label, value: todo, onChange: handleChange }} />
+        <Input {...{ label, value, onChange: handleChange }} />
       </div>
 
       <div className="button-container">
         <div className="delete-button">
-          <Button variant="danger" size="large" onClick={onDeleteTask}>
+          <Button variant="danger" size="large" onClick={onDeleteTodo}>
             Delete
           </Button>
         </div>
 
-        <Button variant="primary" size="large" onClick={onSubmitTodo}>
+        <Button variant="primary" size="large" onClick={onAddTodo}>
           Save
         </Button>
       </div>

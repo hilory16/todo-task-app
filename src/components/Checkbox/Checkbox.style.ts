@@ -19,6 +19,10 @@ export const Wrapper = styled.div`
       color: ${({ theme }) => theme.colors.textColor2};
       padding-top: 8px;
       display: block;
+      max-width: 230px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     /* Hide the browser's default checkbox */

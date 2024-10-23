@@ -9,9 +9,11 @@ import { TodoType } from '~/types/todo'
 
 type TodoListProps = {
   todos: TodoType[] | []
+  onEditTodo: (todoId: string | number) => void
+  updateTodoStatus: (todoId: string | number) => void
 }
 
-export function Sidebar({ todos }: TodoListProps) {
+export function Sidebar({ todos, onEditTodo, updateTodoStatus }: TodoListProps) {
   return (
     <S.Wrapper>
       <UserWelcome
@@ -20,7 +22,7 @@ export function Sidebar({ todos }: TodoListProps) {
         img="/assets/images/user-avi.png"
       />
       <UpgradeBanner />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onEdit={onEditTodo} updateTodoStatus={updateTodoStatus} />
 
       <button type="button" className="add-new-todo">
         <Text className="add-text" as="p">
