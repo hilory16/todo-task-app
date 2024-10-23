@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
     left: 339px;
     bottom: 25px;
     z-index: 10;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
 
     .add-text {
       font-size: 36px;

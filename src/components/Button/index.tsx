@@ -36,6 +36,8 @@ const Button = styled(({ as: Component = 'button', ...props }: ButtonProps) => <
           height: 61px;
           font-size: 18px;
           border-radius: 6px;
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+          text-shadow: 0px 2.5px black;
         `
       case 'medium':
       default:

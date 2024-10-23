@@ -26,6 +26,7 @@ export const Wrapper = styled.div`
 
   .plan-heading {
     color: ${({ theme }) => theme.colors.textColor2};
+    text-shadow: 0px 2.5px white;
   }
 
   .upgrade-cost {
