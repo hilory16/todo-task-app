@@ -1,6 +1,5 @@
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
-import { Text } from '../Text'
 
 import * as S from './Todos.style'
 

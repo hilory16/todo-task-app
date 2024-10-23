@@ -16,7 +16,6 @@ export function Checkbox({ checked, label, onChange }: CheckboxProps) {
             color: checked ? '#8D8D8D' : 'inherit',
           }}
         >
-          {' '}
           {label}
         </span>
         <input type="checkbox" checked={checked} onChange={onChange} />
